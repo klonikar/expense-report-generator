@@ -56,7 +56,7 @@ def process_images_batch(images_data, model, api_key, batch_num):
     """Process a batch of up to 5 images with Groq API."""
     
     system_prompt = """create an expense report with the following columns:
-serial no, document number (invoice number from attachments), date, description (like hotel, transportation, lunch/dinner/food), vendor name, bill provided (yes), amount. In case invoice number is not available in the attachment, use license plate number.
+serial no, document number (invoice number from attachments), date, description (like hotel, transportation, lunch/dinner/food), vendor name, bill provided (yes), amount. In case invoice number is not available in the attachment, use license plate number or PNR.
 For each receipt/bill, add one row with above columns populated.
 Generate output in json format."""
     
